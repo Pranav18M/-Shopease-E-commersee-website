@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply font-sans bg-white dark:bg-[#0A0A0A] text-[#1A1A1A] dark:text-white transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .container {
+    @apply w-full max-w-7xl mx-auto px-6;
+  }
+
+  .btn {
+    @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-[15px] transition-all duration-300 whitespace-nowrap tracking-wide;
+  }
+
+  .btn-primary {
+    @apply bg-black dark:bg-white text-white dark:text-black border border-black dark:border-white uppercase text-[13px] tracking-wider shadow-lg hover:shadow-2xl hover:-translate-y-0.5;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-black dark:text-white border-2 border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-900 hover:border-black dark:hover:border-white;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
